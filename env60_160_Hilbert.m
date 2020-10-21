@@ -6,17 +6,6 @@ clear all
 close all
 
 Fs = 44.1e3;
-% Fco1 = equal_xbm_bands(0,4000,1);
-% b1 = quad_filt_bank(Fco1, Fs);
-%
-% Fco2 = equal_xbm_bands(0,4000,2);
-% b2 = quad_filt_bank(Fco2, Fs);
-%
-% Fco4 = equal_xbm_bands(0,4000,4);
-% b4 = quad_filt_bank(Fco4, Fs);
-%
-% Fco8 = equal_xbm_bands(0,4000,8);
-% b8 = quad_filt_bank(Fco8, Fs);
 
 Fco16 = equal_xbm_bands(0,4000,16);
 b16 = quad_filt_bank(Fco16, Fs);
@@ -47,11 +36,8 @@ for i = 1:length(bands)
     Fco = equal_xbm_bands(0,4000,bands(i));
     B = quad_filt_bank(Fco, Fs);
     
-    %     if i == 1
+    
     wav_filt = fftfilt(real(B),env1_sig);
-    %     else
-    %       wav_file = sum(fftfilt(real(B),env1_sig),2);
-    %     end
     
     %envelope extraction
     sig_abs = abs(wav_filt);
@@ -84,3 +70,8 @@ toPlay_160 = env160_out';
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 toPlay_Hilb = make_band_chimeras_modified(filename, 'noise', bands);
+
+
+%TODO: Generate Wav files, plot spectrograms
+%Also get the chimeras working. Should be easy, just swap out 'noise' with
+%the signal you want as tfs

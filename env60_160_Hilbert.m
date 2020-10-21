@@ -77,8 +77,10 @@ for i = 1:length(bands)
 end
 
 
-toPlay_60 = env60_out;
-toPlay_160 = env160_out;
+toPlay_60 = env60_out';
+toPlay_160 = env160_out';
 
 %sound(toPlay_60(5,:),Fs);
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+toPlay_Hilb = make_band_chimeras_modified(filename, 'noise', bands);

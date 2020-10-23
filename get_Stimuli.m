@@ -1,21 +1,11 @@
-addpath("Delgutte_Code/")
-addpath("Chimera code and WAV files/SPINsents")
+function [toPlay_60, toPlay_160, toPlay_Hilb, Fs] = get_Stimuli(filename,bands)
 
-%Creating the Filter bands (Part A)
-clear all 
-close all
 
-Fs = 44.1e3;
+% Fs = 44.1e3;
 
-% Fco16 = equal_xbm_bands(0,4000,16);
-% b16 = quad_filt_bank(Fco16, Fs);
+% filename = '102.wav'
 
-%Envelope Extractions (Part B)
-
-%CAN MODIFY THIS LINE SO CAN EASILY SWITCH SENTENCES OUT/MAKE INTO A FXN
-filename = '102.wav'
-
-[wav_file Fs2] = audioread(filename);
+[wav_file,Fs] = audioread(filename);
 
 %Signal for envelope extraction
 
@@ -29,7 +19,7 @@ sig_abs = abs(env1_sig);
 
 noise = randn(1,length(wav_file));
 
-bands = [1,2,4,8,16]
+% bands = [1,2,4,8,16]
 
 for i = 1:length(bands)
     
@@ -66,12 +56,7 @@ end
 toPlay_60 = env60_out';
 toPlay_160 = env160_out';
 
-%sound(toPlay_60(5,:),Fs);
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 toPlay_Hilb = make_band_chimeras_modified(filename, 'noise', bands);
 
+end
 
-%TODO: Generate Wav files, plot spectrograms
-%Also get the chimeras working. Should be easy, just swap out 'noise' with
-%the signal you want as tfs

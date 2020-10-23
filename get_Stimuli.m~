@@ -1,4 +1,4 @@
-function [toPlay_60, toPlay_160, Fs] = get_Stimuli(env_sig,tfs_sig,Fs,bands,chimera)
+function [toPlay_60, toPlay_160, Fs] = get_Stimuli(env_sig,tfs_sig,Fs,bands)
 
 
 % Fs = 44.1e3;
@@ -37,15 +37,12 @@ for i = 1:length(bands)
     tfs_60 = filter(b_60, a_60, tfs_abs);
     tfs_160 = filter(b_160, a_160, tfs_abs);
     
-    %allows for quick hilbert tfs extraction if it's chimera for Part B
-    %otherwise will just assume tfs has no envelope
+%     tfs_sig60 = tfs_sig./tfs_60;
+%     tfs_sig160 = tfs_sig./tfs_160;
+
     
-    if chimera 
-          tfs_sig = cos(angle(hilbert(tfs_sig)));
-    end
-    
-    all_bands_60 = env_60.*tfs_sig;
-    all_bands_160 = env_160.*tfs_sig;
+    all_bands_60 = env_60.*tfs_sig_hilb;
+    all_bands_160 = env_160.*tfs_sig_hilb;
 
     if i ==1 
         env60_combined = fftfilt(real(B),all_bands_60);

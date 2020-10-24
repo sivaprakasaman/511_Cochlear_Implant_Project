@@ -91,10 +91,10 @@ i = i+1;
     
     env1_fts2_tot(:,i) = env1_fts2(:,1);
     
-%     chimfileA = sprintf('%s_env+%s_fts-nb%d%s.wav', name1, name2, nb, refilt_code);
-%     chimfileB = sprintf('%s_env+%s_fts-nb%d%s.wav', name2, name1, nb, refilt_code);
-%     wavwrite(env1_fts2, Fs, 16, [ChimeraFolder '\' chimfileA]);
-%     wavwrite(env2_fts1, Fs, 16, [ChimeraFolder '\' chimfileB]);
+%      chimfileA = sprintf('hilb_%s_env+%s_fts-nb%d.wav', name1, name2, nb);
+%      chimfileB = sprintf('hilb_%s_env+%s_fts-nb%d.wav', name2, name1, nb);
+%      audiowrite(env1_fts2, Fs, 16, [ChimeraFolder '\' chimfileA]);
+%      audiowrite(env2_fts1, Fs, 16, [ChimeraFolder '\' chimfileB]);
 
     if do_play,		% play band chimeras
 	   	disp(sprintf('Playing %d-band chimeras', nb))

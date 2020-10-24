@@ -1,0 +1,92 @@
+close all
+clear all
+
+stims = 10;
+conds = 3;
+bands = 5;
+Fs = 44.1e3;
+
+all_trials = zeros(bands*conds*stims,3);
+i = 0;
+
+for s = 1:stims
+    
+    for c = 1:conds
+        
+        for b = 1:bands
+            i = i+1;
+            all_trials(i,1:3) = [s,c,b];
+            
+        end 
+    end
+    
+end
+
+randoms = randperm(bands*conds*stims);
+
+random_trials = all_trials(randoms(1:60),:);
+
+addpath("PartA_Stim")
+
+files = ["101.mat","102.mat","103.mat","104.mat","105.mat","106.mat","107.mat","108.mat","109.mat","110.mat"];
+sentences = ('1- His plan meant taking a big risk, 2- Stir your coffee with a spoon, 3- Miss White wont think about the crack, 4- He would think about the rag, 5- The plow was pulled by an ox, 6- The old train was powered by steam.');
+sentences2 = ('7- The Old man talked about the lungs, 8- I was considering the crook, 9- Lets decide by tossing a coin, 10- The doctor prescribed the drug');
+
+bands60 = zeros(1,bands);
+bands160 = zeros(1,bands);
+bandsHilb = zeros(1,bands);
+
+bands60_total = zeros(1,bands);
+bands160_total = zeros(1,bands);
+bandsHilb_total = zeros(1,bands);
+
+for k = 1:length(random_trials)
+    
+    clear toPlay_60 toPlay_160 toPlay_Hilb 
+    load(files(random_trials(k,1)));
+    
+    disp(['Trial: ', num2str(k)])
+    disp(sentences);
+    disp(sentences2);
+
+    correct = random_trials(k,1);
+    condition = random_trials(k,2);
+    band = random_trials(k,3);
+    
+    if condition == 1
+        sound(toPlay_60(:,band),Fs);
+        answer = input('Which did you hear? ');
+        bands60_total(1,band) = bands60_total(1,band) + 1;
+        
+        if answer == correct
+            bands60(1,band) = bands60(1,band) + 1;
+        end
+    elseif condition == 2
+        sound(toPlay_160(:,band),Fs);
+        answer = input('Which did you hear? ');
+        bands160_total(1,band) = bands160_total(1,band) + 1;
+
+        if answer == correct
+            bands160(1,band) = bands160(1,band) + 1;
+        end
+    elseif condition == 3
+        sound(toPlay_Hilb(:,band),Fs);
+        answer = input('Which did you hear? ');
+        bandsHilb_total(1,band) = bandsHilb_total(1,band) + 1;
+
+        if answer == correct
+            bandsHilb(1,band) = bandsHilb(1,band) + 1;
+        end
+    else
+        disp('error')
+    end
+
+end
+
+
+
+hold on 
+plot(bands60./bands60_total)
+plot(bands160./bands160_total)
+plot(bandsHilb./bandsHilb_total)
+hold off

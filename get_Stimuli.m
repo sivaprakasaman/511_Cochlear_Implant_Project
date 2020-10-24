@@ -1,4 +1,4 @@
-function [toPlay_60, toPlay_160, Fs] = get_Stimuli(env_sig,tfs_sig,Fs,bands,chimera)
+function [toPlay_60, toPlay_160, Fs,tfs_filt_sum] = get_Stimuli(env_sig,tfs_sig,Fs,bands,chimera)
 
 
 % Fs = 44.1e3;
@@ -26,7 +26,12 @@ for i = 1:length(bands)
     
     env_filt = fftfilt(real(B),env_sig);
     tfs_filt = fftfilt(real(B),tfs_sig);
-
+   
+    if i > 1
+        tfs_filt_sum(:,i) = sum(tfs_filt,2);
+    else
+        tfs_filt_sum(:,i) = tfs_filt;
+    end
     %envelope extraction
     env_abs = abs(env_filt);
     env_60 = filter(b_60, a_60, env_abs);

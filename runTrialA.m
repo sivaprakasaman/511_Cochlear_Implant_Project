@@ -1,7 +1,8 @@
+clc;
 close all
 clear all
 
-toRun = 60;
+toRun = 120;
 
 stims = 10;
 conds = 3;
@@ -124,5 +125,5 @@ xlabel("# of Bands");
 legend('60 Hz LPF', '160 Hz LPF', 'Hilbert');
 
 cd PartA_Results
-num = str2num(input('Test Number? '));
+num = (input('Test Number? '));
 save(['test',num,'.mat'],'bands60','bands60_total','bands160','bands160_total','bandsHilb','bandsHilb_total','rxntime60','rxntime160','rxntimeHilb');

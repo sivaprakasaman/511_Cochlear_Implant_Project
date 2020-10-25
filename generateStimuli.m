@@ -8,7 +8,8 @@ addpath("Heinz_Spectrogram/")
 addpath("PartA_Stim")
 
 
-files = ["101","102","103","104","105","106","107","108","109","110"];
+%files = ["101","102","103","104","105","106","107","108","109","110"];
+files = ["101"];
 
 %files = ["Mt10","Mt190"];
 
@@ -51,14 +52,14 @@ for i = 1:length(files)
     toPlay_Hilb = make_band_chimeras_modified(env, tfs, bands);
     
     %plotting
-%     signal = toPlay_60(:,6);
-%     BW_Hz = 30;
-%     DynamicRange_dB = 45;
-%     [Sgram,SG_Freq_Hz,SG_Time_sec] = spectrogram_BW_DR(signal, BW_Hz, Fs, DynamicRange_dB);
+    signal = toPlay_Hilb(:,5);
+    BW_Hz = 30;
+    DynamicRange_dB = 45;
+    [Sgram,SG_Freq_Hz,SG_Time_sec] = spectrogram_BW_DR(signal, BW_Hz, Fs, DynamicRange_dB);
+
+%     cd PartA_Stim
+%     save(strcat(files(i),'.mat'),'toPlay_Hilb', 'toPlay_160','toPlay_60'); %part A
 %     
-    cd PartA_Stim
-    save(strcat(files(i),'.mat'),'toPlay_Hilb', 'toPlay_160','toPlay_60'); %part A
-    
     %save(strcat(files(1),'env',files(2),'tfs.mat'),'toPlay_Hilb', 'toPlay_160','toPlay_60')
     
     cd ../

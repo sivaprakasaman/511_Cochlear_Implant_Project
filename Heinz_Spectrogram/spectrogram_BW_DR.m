@@ -77,7 +77,7 @@ fig_xlength_inches = 5;
 fig_ylength_inches = 6;
 set(gcf,'Position',[fig_xcorner_inches fig_ycorner_inches fig_xlength_inches fig_ylength_inches]);
 
-h1 = subplot(211);
+%h1 = subplot(211);
 surf(SG_Time_sec,SG_Freq_Hz,Sgram_dB,'EdgeColor','none');  % These commands are from MATLAB's help on "spectrogram"
 axis xy; axis tight; colormap(jet); view(0,90);
 title(sprintf('Spectrogram [BW = %.f Hz; Dynamic Range = %.f dB]',BW_Hz,DynamicRange_dB),'FontSize',LabelFontSize)

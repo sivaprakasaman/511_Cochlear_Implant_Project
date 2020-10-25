@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.10.23)  25 OCT 2020 13:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.10.23)  25 OCT 2020 18:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -538,16 +538,16 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package epstopdf Info: Source file: <./Figures/envelopes.eps>
-(epstopdf)                    date: 2020-10-25 13:00:08
+(epstopdf)                    date: 2020-10-25 16:33:42
 (epstopdf)                    size: 733250 bytes
 (epstopdf)             Output file: <./Figures/envelopes-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-10-25 13:00:11
-(epstopdf)                    size: 245642 bytes
+(epstopdf)                    date: 2020-10-25 16:33:46
+(epstopdf)                    size: 245641 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/envelopes-eps-co
 nverted-to.pdf ./Figures/envelopes.eps>
 (epstopdf)             \includegraphics on input line 37.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/envelopes-eps-converted-to.pdf, id=12, 941.5175pt x 426.59375pt>
+<./Figures/envelopes-eps-converted-to.pdf, id=16, 941.5175pt x 426.59375pt>
 File: ./Figures/envelopes-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/envelopes-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/envelopes-eps-converted-to.pdf  used on inpu
@@ -568,7 +568,7 @@ Package epstopdf Info: Source file: <./Figures/16_1.eps>
 ed-to.pdf ./Figures/16_1.eps>
 (epstopdf)             \includegraphics on input line 45.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/16_1-eps-converted-to.pdf, id=13, 522.95375pt x 377.41pt>
+<./Figures/16_1-eps-converted-to.pdf, id=17, 522.95375pt x 377.41pt>
 File: ./Figures/16_1-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/16_1-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/16_1-eps-converted-to.pdf  used on input lin
@@ -584,7 +584,7 @@ Package epstopdf Info: Source file: <./Figures/160_1.eps>
 ted-to.pdf ./Figures/160_1.eps>
 (epstopdf)             \includegraphics on input line 46.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/160_1-eps-converted-to.pdf, id=14, 604.2575pt x 398.48875pt>
+<./Figures/160_1-eps-converted-to.pdf, id=18, 604.2575pt x 398.48875pt>
 File: ./Figures/160_1-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/160_1-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/160_1-eps-converted-to.pdf  used on input li
@@ -600,7 +600,7 @@ Package epstopdf Info: Source file: <./Figures/hilb_1.eps>
 rted-to.pdf ./Figures/hilb_1.eps>
 (epstopdf)             \includegraphics on input line 47.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/hilb_1-eps-converted-to.pdf, id=15, 612.2875pt x 416.55624pt>
+<./Figures/hilb_1-eps-converted-to.pdf, id=19, 612.2875pt x 416.55624pt>
 File: ./Figures/hilb_1-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/hilb_1-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/hilb_1-eps-converted-to.pdf  used on input l
@@ -616,7 +616,7 @@ Package epstopdf Info: Source file: <./Figures/16_4.eps>
 ed-to.pdf ./Figures/16_4.eps>
 (epstopdf)             \includegraphics on input line 49.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/16_4-eps-converted-to.pdf, id=16, 652.4375pt x 471.7625pt>
+<./Figures/16_4-eps-converted-to.pdf, id=20, 652.4375pt x 471.7625pt>
 File: ./Figures/16_4-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/16_4-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/16_4-eps-converted-to.pdf  used on input lin
@@ -632,7 +632,7 @@ Package epstopdf Info: Source file: <./Figures/160_4.eps>
 ted-to.pdf ./Figures/160_4.eps>
 (epstopdf)             \includegraphics on input line 50.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/160_4-eps-converted-to.pdf, id=17, 588.1975pt x 425.59pt>
+<./Figures/160_4-eps-converted-to.pdf, id=21, 588.1975pt x 425.59pt>
 File: ./Figures/160_4-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/160_4-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/160_4-eps-converted-to.pdf  used on input li
@@ -648,7 +648,7 @@ Package epstopdf Info: Source file: <./Figures/hilb_4.eps>
 rted-to.pdf ./Figures/hilb_4.eps>
 (epstopdf)             \includegraphics on input line 51.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/hilb_4-eps-converted-to.pdf, id=18, 593.21625pt x 437.635pt>
+<./Figures/hilb_4-eps-converted-to.pdf, id=22, 593.21625pt x 437.635pt>
 File: ./Figures/hilb_4-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/hilb_4-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/hilb_4-eps-converted-to.pdf  used on input l
@@ -664,7 +664,7 @@ Package epstopdf Info: Source file: <./Figures/16_16.eps>
 ted-to.pdf ./Figures/16_16.eps>
 (epstopdf)             \includegraphics on input line 53.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/16_16-eps-converted-to.pdf, id=19, 534.99875pt x 370.38374pt>
+<./Figures/16_16-eps-converted-to.pdf, id=23, 534.99875pt x 370.38374pt>
 File: ./Figures/16_16-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/16_16-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/16_16-eps-converted-to.pdf  used on input li
@@ -680,7 +680,7 @@ Package epstopdf Info: Source file: <./Figures/160_16.eps>
 rted-to.pdf ./Figures/160_16.eps>
 (epstopdf)             \includegraphics on input line 54.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/160_16-eps-converted-to.pdf, id=20, 578.16pt x 395.4775pt>
+<./Figures/160_16-eps-converted-to.pdf, id=24, 578.16pt x 395.4775pt>
 File: ./Figures/160_16-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/160_16-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/160_16-eps-converted-to.pdf  used on input l
@@ -696,7 +696,7 @@ Package epstopdf Info: Source file: <./Figures/hilb_16.eps>
 erted-to.pdf ./Figures/hilb_16.eps>
 (epstopdf)             \includegraphics on input line 55.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/hilb_16-eps-converted-to.pdf, id=21, 576.1525pt x 417.56pt>
+<./Figures/hilb_16-eps-converted-to.pdf, id=25, 576.1525pt x 417.56pt>
 File: ./Figures/hilb_16-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/hilb_16-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/hilb_16-eps-converted-to.pdf  used on input 
@@ -762,66 +762,185 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--64
  []
 
 Package epstopdf Info: Source file: <./Figures/figA1.eps>
-(epstopdf)                    date: 2020-10-25 00:29:20
-(epstopdf)                    size: 16097 bytes
+(epstopdf)                    date: 2020-10-25 14:15:24
+(epstopdf)                    size: 22673 bytes
 (epstopdf)             Output file: <./Figures/figA1-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-10-25 00:33:06
-(epstopdf)                    size: 9275 bytes
+(epstopdf)                    date: 2020-10-25 14:17:51
+(epstopdf)                    size: 9618 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/figA1-eps-conver
 ted-to.pdf ./Figures/figA1.eps>
 (epstopdf)             \includegraphics on input line 68.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/figA1-eps-converted-to.pdf, id=84, 421.575pt x 316.18124pt>
+<./Figures/figA1-eps-converted-to.pdf, id=88, 421.575pt x 316.18124pt>
 File: ./Figures/figA1-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/figA1-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/figA1-eps-converted-to.pdf  used on input li
 ne 68.
 (pdftex.def)             Requested size: 203.80193pt x 152.85078pt.
 Package epstopdf Info: Source file: <./Figures/figA2.eps>
-(epstopdf)                    date: 2020-10-25 00:29:34
-(epstopdf)                    size: 15465 bytes
+(epstopdf)                    date: 2020-10-25 14:15:36
+(epstopdf)                    size: 23922 bytes
 (epstopdf)             Output file: <./Figures/figA2-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-10-25 00:33:07
-(epstopdf)                    size: 9144 bytes
+(epstopdf)                    date: 2020-10-25 14:17:51
+(epstopdf)                    size: 9848 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/figA2-eps-conver
 ted-to.pdf ./Figures/figA2.eps>
 (epstopdf)             \includegraphics on input line 69.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/figA2-eps-converted-to.pdf, id=85, 421.575pt x 316.18124pt>
+<./Figures/figA2-eps-converted-to.pdf, id=89, 414.54875pt x 321.2pt>
 File: ./Figures/figA2-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/figA2-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/figA2-eps-converted-to.pdf  used on input li
 ne 69.
-(pdftex.def)             Requested size: 203.80193pt x 152.85078pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
+(pdftex.def)             Requested size: 203.80193pt x 157.90889pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+ []
+
 [2 <./Figures/figA1-eps-converted-to.pdf> <./Figures/figA2-eps-converted-to.pdf
 >]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
- (./CI_Project_Writeup.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
+Package epstopdf Info: Source file: <./Figures/B1_3.eps>
+(epstopdf)                    date: 2020-10-25 16:41:12
+(epstopdf)                    size: 25586 bytes
+(epstopdf)             Output file: <./Figures/B1_3-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-10-25 16:41:45
+(epstopdf)                    size: 9603 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/B1_3-eps-convert
+ed-to.pdf ./Figures/B1_3.eps>
+(epstopdf)             \includegraphics on input line 89.
+Package epstopdf Info: Output file is already uptodate.
+<./Figures/B1_3-eps-converted-to.pdf, id=116, 421.575pt x 316.18124pt>
+File: ./Figures/B1_3-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/B1_3-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/B1_3-eps-converted-to.pdf  used on input lin
+e 89.
+(pdftex.def)             Requested size: 130.08731pt x 97.56648pt.
+Package epstopdf Info: Source file: <./Figures/B1_1.eps>
+(epstopdf)                    date: 2020-10-25 16:40:56
+(epstopdf)                    size: 25179 bytes
+(epstopdf)             Output file: <./Figures/B1_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-10-25 16:41:45
+(epstopdf)                    size: 9823 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/B1_1-eps-convert
+ed-to.pdf ./Figures/B1_1.eps>
+(epstopdf)             \includegraphics on input line 90.
+Package epstopdf Info: Output file is already uptodate.
+<./Figures/B1_1-eps-converted-to.pdf, id=117, 421.575pt x 316.18124pt>
+File: ./Figures/B1_1-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/B1_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/B1_1-eps-converted-to.pdf  used on input lin
+e 90.
+(pdftex.def)             Requested size: 130.08731pt x 97.56648pt.
+Package epstopdf Info: Source file: <./Figures/B1_2.eps>
+(epstopdf)                    date: 2020-10-25 16:41:03
+(epstopdf)                    size: 25440 bytes
+(epstopdf)             Output file: <./Figures/B1_2-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-10-25 16:41:45
+(epstopdf)                    size: 9989 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/B1_2-eps-convert
+ed-to.pdf ./Figures/B1_2.eps>
+(epstopdf)             \includegraphics on input line 91.
+Package epstopdf Info: Output file is already uptodate.
+<./Figures/B1_2-eps-converted-to.pdf, id=118, 421.575pt x 316.18124pt>
+File: ./Figures/B1_2-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/B1_2-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/B1_2-eps-converted-to.pdf  used on input lin
+e 91.
+(pdftex.def)             Requested size: 130.08731pt x 97.56648pt.
+Package epstopdf Info: Source file: <./Figures/B2_3.eps>
+(epstopdf)                    date: 2020-10-25 16:41:39
+(epstopdf)                    size: 25147 bytes
+(epstopdf)             Output file: <./Figures/B2_3-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-10-25 16:41:46
+(epstopdf)                    size: 9610 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/B2_3-eps-convert
+ed-to.pdf ./Figures/B2_3.eps>
+(epstopdf)             \includegraphics on input line 93.
+Package epstopdf Info: Output file is already uptodate.
+<./Figures/B2_3-eps-converted-to.pdf, id=119, 421.575pt x 316.18124pt>
+File: ./Figures/B2_3-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/B2_3-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/B2_3-eps-converted-to.pdf  used on input lin
+e 93.
+(pdftex.def)             Requested size: 130.08731pt x 97.56648pt.
+Package epstopdf Info: Source file: <./Figures/B2_1.eps>
+(epstopdf)                    date: 2020-10-25 16:41:24
+(epstopdf)                    size: 25363 bytes
+(epstopdf)             Output file: <./Figures/B2_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-10-25 16:41:46
+(epstopdf)                    size: 9746 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/B2_1-eps-convert
+ed-to.pdf ./Figures/B2_1.eps>
+(epstopdf)             \includegraphics on input line 94.
+Package epstopdf Info: Output file is already uptodate.
+<./Figures/B2_1-eps-converted-to.pdf, id=120, 421.575pt x 316.18124pt>
+File: ./Figures/B2_1-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/B2_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/B2_1-eps-converted-to.pdf  used on input lin
+e 94.
+(pdftex.def)             Requested size: 130.08731pt x 97.56648pt.
+Package epstopdf Info: Source file: <./Figures/B2_2.eps>
+(epstopdf)                    date: 2020-10-25 16:41:32
+(epstopdf)                    size: 25292 bytes
+(epstopdf)             Output file: <./Figures/B2_2-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-10-25 16:41:46
+(epstopdf)                    size: 9818 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/B2_2-eps-convert
+ed-to.pdf ./Figures/B2_2.eps>
+(epstopdf)             \includegraphics on input line 95.
+Package epstopdf Info: Output file is already uptodate.
+<./Figures/B2_2-eps-converted-to.pdf, id=121, 421.575pt x 316.18124pt>
+File: ./Figures/B2_2-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/B2_2-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/B2_2-eps-converted-to.pdf  used on input lin
+e 95.
+(pdftex.def)             Requested size: 130.08731pt x 97.56648pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
+[3 <./Figures/B1_3-eps-converted-to.pdf> <./Figures/B1_1-eps-converted-to.pdf> 
+<./Figures/B1_2-eps-converted-to.pdf> <./Figures/B2_3-eps-converted-to.pdf> <./
+Figures/B2_1-eps-converted-to.pdf> <./Figures/B2_2-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
+
+(./CI_Project_Writeup.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
 Package rerunfilecheck Info: File `CI_Project_Writeup.out' has not changed.
-(rerunfilecheck)             Checksum: 727694847C34ED9A16993A20F3046CE1;226.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
+(rerunfilecheck)             Checksum: 6185D9EE1A247EBCEBA1E2416E13A77E;355.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
  ) 
 Here is how much of TeX's memory you used:
- 8875 strings out of 482811
- 135528 string characters out of 5955739
- 403784 words of memory out of 5000000
- 23997 multiletter control sequences out of 15000+600000
+ 8996 strings out of 482811
+ 137432 string characters out of 5955739
+ 406784 words of memory out of 5000000
+ 24112 multiletter control sequences out of 15000+600000
  567958 words of font info for 54 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 43i,5n,37p,809b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb
->
-Output written on CI_Project_Writeup.pdf (2 pages, 2656043 bytes).
+ 43i,5n,37p,1031b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm
+/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmtt9.pfb>
+Output written on CI_Project_Writeup.pdf (3 pages, 2730857 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
+ 16 named destinations out of 1000 (max. 500000)
+ 115 words of extra memory for PDF output out of 10000 (max. 10000000)
 

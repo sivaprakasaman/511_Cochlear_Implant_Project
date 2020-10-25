@@ -206,9 +206,9 @@ plot(bandv,partA_bands60_mean*100,'r','Linewidth',2)
 plot(bandv,partA_bands160_mean*100,'b','Linewidth',2)
 plot(bandv,partA_bandsHilb_mean*100,'g','Linewidth',2)
 
-errorbar(bandv,partA_bands60_mean*100,partA_bands60_std*100,'r')
-errorbar(bandv,partA_bands160_mean*100,partA_bands160_std*100,'b')
-errorbar(bandv,partA_bandsHilb_mean*100,partA_bandsHilb_std*100,'g')
+errorbar(bandv,partA_bands60_mean*100,partA_bands60_std*100,'rs')
+errorbar(bandv,partA_bands160_mean*100,partA_bands160_std*100,'bs')
+errorbar(bandv,partA_bandsHilb_mean*100,partA_bandsHilb_std*100,'gs')
 hold off
 title('Percent Correct vs Number of Bands');
 ylabel("%Correct")
@@ -224,9 +224,9 @@ plot(bandv,partA_rxntime160_mean,'b','Linewidth',2)
 plot(bandv,partA_rxntimeHilb_mean,'g','Linewidth',2)
 
 
-errorbar(bandv,partA_rxntime60_mean,partA_rxntime60_std,'r')
-errorbar(bandv,partA_rxntime160_mean,partA_rxntime160_std,'b')
-errorbar(bandv,partA_rxntimeHilb_mean,partA_rxntimeHilb_std,'g')
+errorbar(bandv,partA_rxntime60_mean,partA_rxntime60_std,'rs')
+errorbar(bandv,partA_rxntime160_mean,partA_rxntime160_std,'bs')
+errorbar(bandv,partA_rxntimeHilb_mean,partA_rxntimeHilb_std,'gs')
 
 hold off
 title('Reaction Time vs Number of Bands');
@@ -244,8 +244,8 @@ figure;
 hold on 
 plot(bandv,partB1_bands60_env_mean*100,'r','Linewidth',2)
 plot(bandv,partB1_bands60_tfs_mean*100,'r--','Linewidth',2)
-errorbar(bandv,partB1_bands60_env_mean*100,partB1_bands60_env_std*100,'r')
-errorbar(bandv,partB1_bands60_tfs_mean*100,partB1_bands60_tfs_std*100,'r')
+errorbar(bandv,partB1_bands60_env_mean*100,partB1_bands60_env_std*100,'rs')
+errorbar(bandv,partB1_bands60_tfs_mean*100,partB1_bands60_tfs_std*100,'rs')
 hold off
 legend('ENV', 'TFS');
 title('Sentences | 16 Hz Env | Feature Identified vs Number of Bands');
@@ -259,8 +259,8 @@ figure;
 hold on
 plot(bandv,partB1_bands160_env_mean*100,'b','Linewidth',2)
 plot(bandv,partB1_bands160_tfs_mean*100,'b--','Linewidth',2)
-errorbar(bandv,partB1_bands160_env_mean*100,partB1_bands60_env_std*100,'b')
-errorbar(bandv,partB1_bands160_tfs_mean*100,partB1_bands60_tfs_std*100,'b')
+errorbar(bandv,partB1_bands160_env_mean*100,partB1_bands60_env_std*100,'bs')
+errorbar(bandv,partB1_bands160_tfs_mean*100,partB1_bands60_tfs_std*100,'bs')
 hold off
 legend('ENV', 'TFS');
 title('Sentences | 160 Hz Env |Feature Identified vs Number of Bands');
@@ -274,8 +274,8 @@ figure;
 hold on
 plot(bandv,partB1_bandsHilb_env_mean*100,'g','Linewidth',2)
 plot(bandv,partB1_bandsHilb_tfs_mean*100,'g--','Linewidth',2)
-errorbar(bandv,partB1_bandsHilb_env_mean*100,partB1_bandsHilb_env_std*100,'g')
-errorbar(bandv,partB1_bandsHilb_tfs_mean*100,partB1_bandsHilb_tfs_std*100,'g')
+errorbar(bandv,partB1_bandsHilb_env_mean*100,partB1_bandsHilb_env_std*100,'gs')
+errorbar(bandv,partB1_bandsHilb_tfs_mean*100,partB1_bandsHilb_tfs_std*100,'gs')
 hold off
 legend('ENV', 'TFS');
 title('Sentences | Hilbert Env |Feature Identified vs Number of Bands');
@@ -320,8 +320,8 @@ figure;
 hold on 
 plot(bandv,partB2_bands60_env_mean*100,'r','Linewidth',2)
 plot(bandv,partB2_bands60_tfs_mean*100,'r--','Linewidth',2)
-errorbar(bandv,partB2_bands60_env_mean*100,partB2_bands60_env_std*100,'r')
-errorbar(bandv,partB2_bands60_tfs_mean*100,partB2_bands60_tfs_std*100,'r')
+errorbar(bandv,partB2_bands60_env_mean*100,partB2_bands60_env_std*100,'rs')
+errorbar(bandv,partB2_bands60_tfs_mean*100,partB2_bands60_tfs_std*100,'rs')
 hold off
 legend('ENV', 'TFS');
 title('Music | 16 Hz Env | Feature Identified vs Number of Bands');
@@ -335,8 +335,8 @@ figure;
 hold on
 plot(bandv,partB2_bands160_env_mean*100,'b','Linewidth',2)
 plot(bandv,partB2_bands160_tfs_mean*100,'b--','Linewidth',2)
-errorbar(bandv,partB2_bands160_env_mean*100,partB2_bands60_env_std*100,'b')
-errorbar(bandv,partB2_bands160_tfs_mean*100,partB2_bands60_tfs_std*100,'b')
+errorbar(bandv,partB2_bands160_env_mean*100,partB2_bands60_env_std*100,'bs')
+errorbar(bandv,partB2_bands160_tfs_mean*100,partB2_bands60_tfs_std*100,'bs')
 hold off
 legend('ENV', 'TFS');
 title('Music | 160 Hz Env | Feature Identified vs Number of Bands');
@@ -350,8 +350,8 @@ figure;
 hold on
 plot(bandv,partB2_bandsHilb_env_mean*100,'g','Linewidth',2)
 plot(bandv,partB2_bandsHilb_tfs_mean*100,'g--','Linewidth',2)
-errorbar(bandv,partB2_bandsHilb_env_mean*100,partB2_bandsHilb_env_std*100,'g')
-errorbar(bandv,partB2_bandsHilb_tfs_mean*100,partB2_bandsHilb_tfs_std*100,'g')
+errorbar(bandv,partB2_bandsHilb_env_mean*100,partB2_bandsHilb_env_std*100,'gs')
+errorbar(bandv,partB2_bandsHilb_tfs_mean*100,partB2_bandsHilb_tfs_std*100,'gs')
 hold off
 legend('ENV', 'TFS');
 title('Music | Hilbert Env | Feature Identified vs Number of Bands');

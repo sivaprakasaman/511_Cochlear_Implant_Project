@@ -25,13 +25,13 @@
 \section{Part A | Introduction to cochlear-implant signal processing}
 
 \begin{enumerate}[label = \alph*) ]
-\item Filter-bank reconstructions were generated using the \verb|quad_filt_bank.m| function from Delgutte within the \verb|get_Stimuli.m| function I created. The bands were set using the \verb|equal_xbm_bands.m| function. This function spaced the frequency bands to match the frequency distribution of the basilar membrane using Liberman's cat cochlear frequency map, scaling it to match the 22kHz hearing range of humans. For cochlear implant user simulation, this is important, since we assume cochlear implant electrodes (bands) are equally spaced. However, the frequency-specific IHCs in the cochlea are not equally spaced from 0-4 kHz, so this correction helps.  
+\item Filter-bank reconstructions were generated using the \verb|quad_filt_bank.m| function from Delgutte within the \verb|get_Stimuli.m| function I created. The bands were set using the \verb|equal_xbm_bands.m| function from Delgutte. This function spaced the frequency bands to match the frequency distribution of the basilar membrane using Liberman's cat cochlear frequency map, scaling it to match the \textasciitilde 20 kHz hearing range of humans. For cochlear implant user simulation, this is important, since we assume cochlear implant electrodes (bands) are equally spaced. However, the frequency-specific IHCs in the cochlea are not equally spaced from 0-4 kHz, so this correction helps.  
 
 \vspace{.5em}
 
 Refer to \verb|B| in my \verb|get_Stimuli.m| code for the filter coefficients. 
 
-\item Here are the envelope extractions visualized for the 1 band filter-bank. It is clear the Hilbert envelope is a lot more liberal than the 16 and 160 Hz envelope extraction methods, allowing it to capture a more detailed picture of the sound being played. 
+\item Below are the different envelope extractions visualized for the 1 band filter-bank. It is apparent that the Hilbert envelope is a more liberal than the 16 and 160 Hz envelope extraction methods, allowing it to capture a more detailed picture of amplitude variations in the sound being played. 
 
 \begin{center}
 \includegraphics[width = .85\textwidth]{envelopes}
@@ -76,7 +76,35 @@ Though our reaction time results are noisier and \textbf{don't demonstrate much 
 
 \begin{enumerate}[label = \alph*)]
 
-\item asd
+\item The Delgutte implementation of acquiring the analytic signal is a smart approach because it prevents the computation of multiple large FFTs. Typically, the way the \verb|hilbert| function in Matlab works is by using a one-sided discrete-time frequency-domain approach outlined in a 1999 paper by Marple. While this method works well for obtaining an analytic signal, it would be computationally expensive in the chimera application because the code would have to first apply our band-pass filters to the signal, then send multiple time-domain signals to \verb|hilbert| which would do an FFT and inverse-FFT to return the analytic signal. \\
+
+The Delgutte code combines a few steps into one very efficient method. The \verb|quad_filter_bank| function generates complex FIR filters \textit{in quadrature}. This means the filter coefficients from \verb|b| are in terms of $cos$ and $sin$ and where the $cos$ part is real and the $sin$ part is imaginary (and represents the Hilbert Transform). Since the analytic signal is in this form (since the Hilbert transform is a change in phase by $+\frac{\pi}{2}$ for neg. frequencies and $-\frac{\pi}{2}$ for pos. frequencies), the envelope and TFS information can be easily extracted by calculating the magnitude and phase angle of the filtered output, respectively (without having to use \verb|hilbert|). The chimera is then synthesized by multiplying the envelope from one signal by the TFS of another. The real part of \verb|b| simply represents the filter-bank bandpass filters, and can be used to refilter the chimera to compensate for filtering-related phase shifts-- as Delgutte does. \\
+
+To create the noise carrier to make speech-noise chimeras, Delgutte uses \textit{spectrally-matched} noise. This means the noise carrier has the same frequency content as the speech signal. The way this is implemented is by taking an FFT of the speech signal, randomly changing the phase using $e^{2\pi j \omega_{random}}$, and taking the inverse FFT. 
+%For long signals, the \verb|fftfilt| function used in the Delgutte code is more efficient than using the \verb|fft| and \verb|ifft| functions by themselves as \verb|hilbert| does, because it uses the \textit{overlap-add} method that breaks the computation into ``smaller pieces.'' \\
+
+\item Our perceptual task consisted of asking the subject which sentence/music they heard most clear, using a single pair of chimeras (S1/S2, M1/M2). The code, found in \verb|runTrialB_music| or \verb|runTrialB_sentence|, noted if the subject chose the envelope or TFS. This was a 2 alternative forced choice study. Therefore, the TFS and ENV curves presented for each band are exactly inverse, unlike the Smith study, which asked subjects to identify multiple melodies if they heard them. The results are shown below (in green):
+
+\begin{center} 
+\includegraphics[width = .3\textwidth]{B1_3}
+\includegraphics[width = .3\textwidth]{B1_1}
+\includegraphics[width = .3\textwidth]{B1_2} \\
+
+\includegraphics[width = .3\textwidth]{B2_3}
+\includegraphics[width = .3\textwidth]{B2_1}
+\includegraphics[width = .3\textwidth]{B2_2}
+
+\end{center}
+
+\item Using 16 Hz and 160 Hz envelope extractions resulted in a slightly later crossing-over (at about  between the TFS and ENV compared to the Hilbert envelope extraction in both the sentence-sentence and music-music chimera trials. As mentioned in A, the Hilbert envelope extraction results in better representation of the fine changes in the signal envelope compared to the rectified low-pass filter approach. This may explain why the subjects, on average, identified hearing the envelope more clearly at lower bands in the Hilbert curves than they did in the 16 and 160 Hz curves.  
+
+\item The main finding that is consistent between the Smith study and ours, despite our \textit{much} less extensive testing, is the general observation that the envelope of the waveform appears to be more useful in identifying words/speech patterns in sentences while the fine structure of the waveform seems to be more useful in identifying music. However, at very low numbers of bands, it appears fine structure is more important for sentence identification. In music, fine structure seems to be most useful at most frequency bands, until the transition at \textasciitilde 25-30 bands, where the envelope starts to become more useful.
+
+\item Modern cochlear implants use a similar filter-bank paired with envelope extraction approach to the methods we used in this project. Current implants transcode information in speech quite well, and give users the ability to succesfully listen and communicate. However, these implants do not transcode the temporal fine structure of sound because of the low-pass filtering or Hilbert transform used to derive the envelope for each band. This is unfortunate, because in music, the temporal fine structure is important in conveying \textit{timbre}. Looking at the frequency spectrum of different instruments playing the same note shows small peaks beyond the fundamental frequency of that note. These small variations that exist in the TFS are what give instruments their unique sounds, and are unable to be properly replicated in CIs. \\
+
+Improving the ability of CI users to hear music or other sounds that have useful information in the TFS is a good next step in cochlear implant development. Most prospects for improving TFS delivery to CIs involve better replication of the TFS. One particular example is found in a 2012 study by Li et al. (Rubinstein Lab) that used a Harmonic Single Sideband Encoder (HSSE) to attempt to better convey TFS. The basic summary of this method is to identify and relay the harmonic content of a given signal to the output channels, which results in more TFS representation of a signal than methods such as continuous-interleaved-sampling (CIS). 
+
+\section{Part C | Consiering a technical artifact with chimera synthesis and its potential implications} 
 
 \end{enumerate}
 \end{document}

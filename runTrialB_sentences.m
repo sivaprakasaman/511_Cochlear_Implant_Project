@@ -143,4 +143,4 @@ legend('60 Hz LPF', '160 Hz LPF', 'Hilbert');
 
 cd PartB_Results
 num = (input('Test Number? '));
-save(['test',num2str(num),'.mat'],'bands60_env','bands60_tfs','bands60_total','bands160_env','bands160_tfs','bands160_total','bandsHilb_env','bandsHilb_tfs','bandsHilb_total','rxntime60','rxntime160','rxntimeHilb');
+save(['sentence',num2str(num),'.mat'],'bands60_env','bands60_tfs','bands60_total','bands160_env','bands160_tfs','bands160_total','bandsHilb_env','bandsHilb_tfs','bandsHilb_total','rxntime60','rxntime160','rxntimeHilb');

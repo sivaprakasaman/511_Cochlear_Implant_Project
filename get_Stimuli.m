@@ -10,7 +10,10 @@ function [toPlay_60, toPlay_160, Fs,tfs_filt_sum] = get_Stimuli(env_sig,tfs_sig,
 
 %full-wave rectification at 60Hz and 160Hz
 
-[b_60,a_60] = butter(3, 60/(Fs/2),'low');
+%NOTE: Accidentally used 60 Hz filter first time around, so changing to 16
+%here. 
+
+[b_60,a_60] = butter(3, 16/(Fs/2),'low');
 [b_160,a_160] = butter(3, 160/(Fs/2),'low');
 [b_4k,a_4k] = butter(3, 4e3/(Fs/2),'low');
 

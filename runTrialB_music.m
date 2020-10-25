@@ -12,7 +12,7 @@ stims = 2;
 conds = 3;
 bands = 9;
 Fs = 22050;
-trials = 3;
+trials = 2;
 
 all_trials = zeros(bands*conds*stims,3);
 i = 0;

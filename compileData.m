@@ -2,7 +2,7 @@ clear all
 close all
 
 nsubj = 2;
-nfilesA = 2;
+nfilesA = 1;
 nfilesB = 1;
 
 folders = ["Data_Andrew"];
@@ -206,7 +206,7 @@ hold off
 title('Percent Correct vs Number of Bands');
 ylabel("%Correct")
 xlabel("# of Bands");
-legend('60 Hz LPF', '160 Hz LPF', 'Hilbert');
+legend('16 Hz LPF', '160 Hz LPF', 'Hilbert');
 
 
 figure;
@@ -218,7 +218,7 @@ hold off
 title('Reaction Time vs Number of Bands');
 ylabel("Time (s)")
 xlabel("# of Bands");
-legend('60 Hz LPF', '160 Hz LPF', 'Hilbert');
+legend('16 Hz LPF', '160 Hz LPF', 'Hilbert');
 
 
 % Part B - Sentences figure
@@ -234,7 +234,7 @@ plot(bandv,partB1_bands60_tfs_mean*100,'r--','Linewidth',2)
 plot(bandv,partB1_bands160_tfs_mean*100,'b--','Linewidth',2)
 plot(bandv,partB1_bandsHilb_tfs_mean*100,'g--','Linewidth',2)
 hold off
-legend('60 Hz\_Env', '160 Hz\_Env', 'Hilbert\_Env','60 Hz\_Tfs', '160 Hz\_Tfs', 'Hilbert\_Tfs');
+legend('16 Hz\_Env', '160 Hz\_Env', 'Hilbert\_Env','60 Hz\_Tfs', '160 Hz\_Tfs', 'Hilbert\_Tfs');
 title('Sentences | Feature Identified vs Number of Bands');
 ylabel("%Identified")
 xlabel("Bands")
@@ -249,7 +249,7 @@ hold off
 title('Sentences | Reaction Time vs Number of Bands');
 ylabel("Time (s)")
 xlabel("# of Bands");
-legend('60 Hz LPF', '160 Hz LPF', 'Hilbert');
+legend('16 Hz LPF', '160 Hz LPF', 'Hilbert');
 
 
 % Part B - Music figure
@@ -263,7 +263,7 @@ plot(bandv,partB2_bands60_tfs_mean*100,'r--','Linewidth',2)
 plot(bandv,partB2_bands160_tfs_mean*100,'b--','Linewidth',2)
 plot(bandv,partB2_bandsHilb_tfs_mean*100,'g--','Linewidth',2)
 hold off
-legend('60 Hz\_Env', '160 Hz\_Env', 'Hilbert\_Env','60 Hz\_Tfs', '160 Hz\_Tfs', 'Hilbert\_Tfs');
+legend('16 Hz\_Env', '160 Hz\_Env', 'Hilbert\_Env','60 Hz\_Tfs', '160 Hz\_Tfs', 'Hilbert\_Tfs');
 title('Music | Feature Identified vs Number of Bands');
 ylabel("%Identified")
 xlabel("Bands")
@@ -278,5 +278,5 @@ hold off
 title('Music | Reaction Time vs Number of Bands');
 ylabel("Time (s)")
 xlabel("# of Bands");
-legend('60 Hz LPF', '160 Hz LPF', 'Hilbert');
+legend('16 Hz LPF', '160 Hz LPF', 'Hilbert');
 

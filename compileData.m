@@ -5,7 +5,7 @@ nsubj = 2;
 nfilesA = 1;
 nfilesB = 1;
 
-folders = ["Data_Andrew"];
+folders = ["Data_Andrew","Data_Joe"];
 
 %Part A:
 
@@ -51,6 +51,9 @@ partA_rxntime60_mean = mean(subj_avg_rxntime60,1);
 partA_rxntime160_mean = mean(subj_avg_rxntime160,1);
 partA_rxntimeHilb_mean = mean(subj_avg_rxntimeHilb,1);
 
+partA_rxntime60_std = std(subj_avg_rxntime60);
+partA_rxntime160_std = std(subj_avg_rxntime160);
+partA_rxntimeHilb_std = std(subj_avg_rxntimeHilb);
 
 
 %% Part B - Sentences:
@@ -202,10 +205,15 @@ hold on
 plot(bandv,partA_bands60_mean*100,'r','Linewidth',2)
 plot(bandv,partA_bands160_mean*100,'b','Linewidth',2)
 plot(bandv,partA_bandsHilb_mean*100,'g','Linewidth',2)
+
+errorbar(bandv,partA_bands60_mean*100,partA_bands60_std*100,'r')
+errorbar(bandv,partA_bands160_mean*100,partA_bands160_std*100,'b')
+errorbar(bandv,partA_bandsHilb_mean*100,partA_bandsHilb_std*100,'g')
 hold off
 title('Percent Correct vs Number of Bands');
 ylabel("%Correct")
 xlabel("# of Bands");
+ylim([0,100])
 legend('16 Hz LPF', '160 Hz LPF', 'Hilbert');
 
 
@@ -214,69 +222,154 @@ hold on
 plot(bandv,partA_rxntime60_mean,'r','Linewidth',2)
 plot(bandv,partA_rxntime160_mean,'b','Linewidth',2)
 plot(bandv,partA_rxntimeHilb_mean,'g','Linewidth',2)
+
+
+errorbar(bandv,partA_rxntime60_mean,partA_rxntime60_std,'r')
+errorbar(bandv,partA_rxntime160_mean,partA_rxntime160_std,'b')
+errorbar(bandv,partA_rxntimeHilb_mean,partA_rxntimeHilb_std,'g')
+
 hold off
 title('Reaction Time vs Number of Bands');
 ylabel("Time (s)")
 xlabel("# of Bands");
+
 legend('16 Hz LPF', '160 Hz LPF', 'Hilbert');
 
 
 % Part B - Sentences figure
 
 bandv = [1,2,4,8,16,24,32,48,64];
+
 figure;
 hold on 
 plot(bandv,partB1_bands60_env_mean*100,'r','Linewidth',2)
-plot(bandv,partB1_bands160_env_mean*100,'b','Linewidth',2)
-plot(bandv,partB1_bandsHilb_env_mean*100,'g','Linewidth',2)
-
 plot(bandv,partB1_bands60_tfs_mean*100,'r--','Linewidth',2)
-plot(bandv,partB1_bands160_tfs_mean*100,'b--','Linewidth',2)
-plot(bandv,partB1_bandsHilb_tfs_mean*100,'g--','Linewidth',2)
+errorbar(bandv,partB1_bands60_env_mean*100,partB1_bands60_env_std*100,'r')
+errorbar(bandv,partB1_bands60_tfs_mean*100,partB1_bands60_tfs_std*100,'r')
 hold off
-legend('16 Hz\_Env', '160 Hz\_Env', 'Hilbert\_Env','16 Hz\_Tfs', '160 Hz\_Tfs', 'Hilbert\_Tfs');
-title('Sentences | Feature Identified vs Number of Bands');
+legend('ENV', 'TFS');
+title('Sentences | 16 Hz Env | Feature Identified vs Number of Bands');
 ylabel("%Identified")
 xlabel("Bands")
+ylim([0,100])
+
 xticks(bandv);
 
 figure;
-hold on 
-plot(bandv,partB1_rxntime60_mean,'r','Linewidth',2)
-plot(bandv,partB1_rxntime160_mean,'b','Linewidth',2)
-plot(bandv,partB1_rxntimeHilb_mean,'g','Linewidth',2)
+hold on
+plot(bandv,partB1_bands160_env_mean*100,'b','Linewidth',2)
+plot(bandv,partB1_bands160_tfs_mean*100,'b--','Linewidth',2)
+errorbar(bandv,partB1_bands160_env_mean*100,partB1_bands60_env_std*100,'b')
+errorbar(bandv,partB1_bands160_tfs_mean*100,partB1_bands60_tfs_std*100,'b')
 hold off
-title('Sentences | Reaction Time vs Number of Bands');
-ylabel("Time (s)")
-xlabel("# of Bands");
-legend('16 Hz LPF', '160 Hz LPF', 'Hilbert');
+legend('ENV', 'TFS');
+title('Sentences | 160 Hz Env |Feature Identified vs Number of Bands');
+ylabel("%Identified")
+xlabel("Bands")
+ylim([0,100])
+
+xticks(bandv);
+
+figure;
+hold on
+plot(bandv,partB1_bandsHilb_env_mean*100,'g','Linewidth',2)
+plot(bandv,partB1_bandsHilb_tfs_mean*100,'g--','Linewidth',2)
+errorbar(bandv,partB1_bandsHilb_env_mean*100,partB1_bandsHilb_env_std*100,'g')
+errorbar(bandv,partB1_bandsHilb_tfs_mean*100,partB1_bandsHilb_tfs_std*100,'g')
+hold off
+legend('ENV', 'TFS');
+title('Sentences | Hilbert Env |Feature Identified vs Number of Bands');
+ylabel("%Identified")
+xlabel("Bands")
+ylim([0,100])
+
+xticks(bandv);
+
+% 
+% figure;
+% hold on 
+% plot(bandv,partB1_rxntime60_mean,'r','Linewidth',2)
+% plot(bandv,partB1_rxntime160_mean,'b','Linewidth',2)
+% plot(bandv,partB1_rxntimeHilb_mean,'g','Linewidth',2)
+% hold off
+% title('Sentences | Reaction Time vs Number of Bands');
+% ylabel("Time (s)")
+% xlabel("# of Bands");
+% legend('16 Hz LPF', '160 Hz LPF', 'Hilbert');
 
 
 % Part B - Music figure
+% figure;
+% hold on 
+% plot(bandv,partB2_bands60_env_mean*100,'r','Linewidth',2)
+% plot(bandv,partB2_bands160_env_mean*100,'b','Linewidth',2)
+% plot(bandv,partB2_bandsHilb_env_mean*100,'g','Linewidth',2)
+% 
+% plot(bandv,partB2_bands60_tfs_mean*100,'r--','Linewidth',2)
+% plot(bandv,partB2_bands160_tfs_mean*100,'b--','Linewidth',2)
+% plot(bandv,partB2_bandsHilb_tfs_mean*100,'g--','Linewidth',2)
+% hold off
+% legend('16 Hz\_Env', '160 Hz\_Env', 'Hilbert\_Env','16 Hz\_Tfs', '160 Hz\_Tfs', 'Hilbert\_Tfs');
+% title('Music | Feature Identified vs Number of Bands');
+% ylabel("%Identified")
+% xlabel("Bands")
+% xticks(bandv);
+%
+
 figure;
 hold on 
 plot(bandv,partB2_bands60_env_mean*100,'r','Linewidth',2)
-plot(bandv,partB2_bands160_env_mean*100,'b','Linewidth',2)
-plot(bandv,partB2_bandsHilb_env_mean*100,'g','Linewidth',2)
-
 plot(bandv,partB2_bands60_tfs_mean*100,'r--','Linewidth',2)
-plot(bandv,partB2_bands160_tfs_mean*100,'b--','Linewidth',2)
-plot(bandv,partB2_bandsHilb_tfs_mean*100,'g--','Linewidth',2)
+errorbar(bandv,partB2_bands60_env_mean*100,partB2_bands60_env_std*100,'r')
+errorbar(bandv,partB2_bands60_tfs_mean*100,partB2_bands60_tfs_std*100,'r')
 hold off
-legend('16 Hz\_Env', '160 Hz\_Env', 'Hilbert\_Env','16 Hz\_Tfs', '160 Hz\_Tfs', 'Hilbert\_Tfs');
-title('Music | Feature Identified vs Number of Bands');
+legend('ENV', 'TFS');
+title('Music | 16 Hz Env | Feature Identified vs Number of Bands');
 ylabel("%Identified")
 xlabel("Bands")
+ylim([0,100])
+
 xticks(bandv);
 
 figure;
-hold on 
-plot(bandv,partB2_rxntime60_mean,'r','Linewidth',2)
-plot(bandv,partB2_rxntime160_mean,'b','Linewidth',2)
-plot(bandv,partB2_rxntimeHilb_mean,'g','Linewidth',2)
+hold on
+plot(bandv,partB2_bands160_env_mean*100,'b','Linewidth',2)
+plot(bandv,partB2_bands160_tfs_mean*100,'b--','Linewidth',2)
+errorbar(bandv,partB2_bands160_env_mean*100,partB2_bands60_env_std*100,'b')
+errorbar(bandv,partB2_bands160_tfs_mean*100,partB2_bands60_tfs_std*100,'b')
 hold off
-title('Music | Reaction Time vs Number of Bands');
-ylabel("Time (s)")
-xlabel("# of Bands");
-legend('16 Hz LPF', '160 Hz LPF', 'Hilbert');
+legend('ENV', 'TFS');
+title('Music | 160 Hz Env | Feature Identified vs Number of Bands');
+ylabel("%Identified")
+xlabel("Bands")
+ylim([0,100])
+
+xticks(bandv);
+
+figure;
+hold on
+plot(bandv,partB2_bandsHilb_env_mean*100,'g','Linewidth',2)
+plot(bandv,partB2_bandsHilb_tfs_mean*100,'g--','Linewidth',2)
+errorbar(bandv,partB2_bandsHilb_env_mean*100,partB2_bandsHilb_env_std*100,'g')
+errorbar(bandv,partB2_bandsHilb_tfs_mean*100,partB2_bandsHilb_tfs_std*100,'g')
+hold off
+legend('ENV', 'TFS');
+title('Music | Hilbert Env | Feature Identified vs Number of Bands');
+ylabel("%Identified")
+xlabel("Bands")
+ylim([0,100])
+
+xticks(bandv);
+
+
+% figure;
+% hold on 
+% plot(bandv,partB2_rxntime60_mean,'r','Linewidth',2)
+% plot(bandv,partB2_rxntime160_mean,'b','Linewidth',2)
+% plot(bandv,partB2_rxntimeHilb_mean,'g','Linewidth',2)
+% hold off
+% title('Music | Reaction Time vs Number of Bands');
+% ylabel("Time (s)")
+% xlabel("# of Bands");
+% legend('16 Hz LPF', '160 Hz LPF', 'Hilbert');
 
